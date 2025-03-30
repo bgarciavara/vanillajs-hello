@@ -1,5 +1,76 @@
-@import "bootstrap/dist/css/bootstrap.min.css";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
 
-body{
-    background: white;
+/* Estilos globales */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  /* Fondo degradado moderno */
+  background: linear-gradient(135deg, #f6d365, #fda085);
+  color: #333;
+}
+
+/* Contenedor principal centrado */
+.wrap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 90%;
+  max-width: 600px;
+  /* Fondo semitransparente para resaltar el contenido */
+  background: rgba(255, 255, 255, 0.85);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Títulos en el contenedor */
+.wrap h1 {
+  margin: 0 0 10px;
+}
+
+/* Título principal */
+.wrap h1:first-of-type {
+  font-size: 24px;
+  color: #ff4757;
+}
+
+/* Estilo para la excusa: bocadillo moderno */
+#excuse {
+  font-size: 20px;
+  padding: 15px;
+  background: #fff;
+  border: 2px solid #ff6b81;
+  border-radius: 10px;
+  position: relative;
+  margin: 20px 0;
+  text-align: center;
+  color: #2f3542;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* "Cola" del bocadillo: flecha inferior */
+#excuse::after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 20px 10px 0;
+  border-style: solid;
+  border-color: #fff transparent transparent;
+}
+
+/* Borde para la "cola", combinando con el contorno del bocadillo */
+#excuse::before {
+  content: "";
+  position: absolute;
+  bottom: -22px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 22px 11px 0;
+  border-style: solid;
+  border-color: #ff6b81 transparent transparent;
 }
